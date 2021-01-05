@@ -1,4 +1,4 @@
-package com.lizza.distributed_lock;
+package com.lizza.lock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
