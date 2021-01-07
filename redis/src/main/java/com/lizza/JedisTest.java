@@ -1,6 +1,11 @@
 package com.lizza;
 
+import com.lizza.util.RedisHolder;
 import redis.clients.jedis.Jedis;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 /**
  * @Desc:
@@ -9,11 +14,8 @@ import redis.clients.jedis.Jedis;
  */
 public class JedisTest {
 
-    public static void main(String[] args){
-        Jedis jedis = new Jedis("127.0.0.1", 6379);
-        jedis.auth("root");
-        jedis.select(0);
-        jedis.set("name", "lizza");
+    public static void main(String[] args) throws IOException {
+        Jedis jedis = RedisHolder.INSTANCE;
         System.out.println(jedis.get("name"));
     }
 }
