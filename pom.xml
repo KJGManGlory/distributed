@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>redis</module>
+        <module>redisson</module>
     </modules>
     <packaging>pom</packaging>
 

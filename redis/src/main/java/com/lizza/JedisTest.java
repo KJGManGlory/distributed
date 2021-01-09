@@ -16,6 +16,7 @@ public class JedisTest {
 
     public static void main(String[] args) throws IOException {
         Jedis jedis = RedisHolder.INSTANCE;
-        System.out.println(jedis.get("name"));
+        System.out.println(jedis.ping());
+        jedis.close();
     }
 }
